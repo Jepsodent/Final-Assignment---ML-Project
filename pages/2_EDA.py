@@ -26,7 +26,9 @@ eda_option = st.selectbox(
         "Duration vs Calories",
         "Heart Rate vs Calories",
         "Age vs Calories",
-        "Gender vs Calories"
+        "Gender vs Calories",
+        "Height vs Calories",
+        "Weight vs Calories",
     ]
 )
 fig, ax = plt.subplots(figsize=(15,5))
@@ -44,7 +46,13 @@ elif eda_option == "Age vs Calories":
     sns.scatterplot(x=df["Age"], y=df["Calories"], ax=ax)
 elif eda_option ==  "Gender vs Calories":
     plt.title("Perbandingan Gender vs Calories")
-    sns.boxplot(x=df["Gender"], y=df["Calories"])
+    sns.boxplot(x=df["Gender"], y=df["Calories"], ax=ax)
+elif eda_option ==  "Height vs Calories":
+    plt.title("Perbandingan Height vs Calories")
+    sns.scatterplot(x=df["Height"], y=df["Calories"],  ax=ax)
+elif eda_option ==  "Weight vs Calories":
+    plt.title("Perbandingan Weight vs Calories")
+    sns.scatterplot(x=df["Weight"], y=df["Calories"],  ax=ax)
 
 st.pyplot(fig, use_container_width=False)
 
