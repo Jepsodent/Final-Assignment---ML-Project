@@ -8,7 +8,10 @@ def clean_data(df):
     if "User_ID" in df.columns:
         df = df.drop(columns=["User_ID"])
 
-    df["Gender"] = df["Gender"].map({"male": 0, "female": 1})
+    if "Gender" in df.columns: 
+        gender_map = {"male": 0, "female": 1}
+        mapped_gender = df["Gender"].astype(str).str.strip().str.lower().map(gender_map)
+        df["Gender"] = mapped_gender.fillna(0).astype(int)
 
     return df
 
