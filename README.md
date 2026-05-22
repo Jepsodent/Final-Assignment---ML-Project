@@ -2,7 +2,11 @@
 
 > **Tugas Akhir Mata Kuliah Machine Learning — Binus University**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://calories-pred.streamlit.app/)
+
 Aplikasi berbasis web ini dikembangkan menggunakan **Streamlit** untuk memprediksi jumlah kalori yang terbakar selama aktivitas fisik. Proyek ini menerapkan siklus kerja (pipeline) Machine Learning yang lengkap mulai dari pemuatan dataset, Exploratory Data Analysis (EDA), Preprocessing data, pelatihan dan perbandingan model regresi secara real-time, hingga demo prediksi interaktif.
+
+* **URL Live Demo:** [https://calories-pred.streamlit.app/](https://calories-pred.streamlit.app/)
 
 ---
 
